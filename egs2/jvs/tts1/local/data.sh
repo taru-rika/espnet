@@ -36,10 +36,10 @@ train_set=${spk}_tr_no_dev
 train_dev=${spk}_dev
 eval_set=${spk}_eval1
 
-if [ ${stage} -le -1 ] && [ ${stop_stage} -ge -1 ]; then
-    log "stage -1: local/data_download.sh"
-    local/data_download.sh "${db_root}"
-fi
+#if [ ${stage} -le -1 ] && [ ${stop_stage} -ge -1 ]; then
+#    log "stage -1: local/data_download.sh"
+#    local/data_download.sh "${db_root}"
+#fi
 
 if [ ${stage} -le 0 ] && [ ${stop_stage} -ge 0 ]; then
     log "stage 0: local/data_prep.sh"

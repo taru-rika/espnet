@@ -7,6 +7,10 @@ db=$1
 spk=$2
 org_data_dir=$3
 
+# ★ 実際のJVSコーパスのパスで上書き ★
+db=/mnt/c/Users/tarumi.rika/jvs_ver1
+echo "DEBUG: data_prep.sh db=${db}, spk=${spk}"
+
 # check arguments
 if [ $# != 3 ]; then
     echo "Usage: $0 <corpus_dir> <target_spk> <data_dir>"
@@ -61,6 +65,6 @@ for name in parallel100 nonpara30; do
     echo "finished making segments."
 
     # check
-    utils/fix_data_dir.sh ${data_dir}
+    #utils/fix_data_dir.sh ${data_dir}
 done
 echo "Successfully finished data preparation."
